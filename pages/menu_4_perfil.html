@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../aseets/img/icon1.png" type="image/x-icon">
+    <title>Pagina de contacto</title>
+    <link rel="stylesheet" href="../aseets/css/menu_4_perfil.css">
+    <link rel="stylesheet" href="../aseets/css/menu1.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+</head>
+<body>
+    <header>
+        <a href="menu_1_inicio.html" class="img"><img src="../aseets/img/logo.jpeg" alt="Logo"></a>
+
+        <!-- Checkbox oculto -->
+        <input type="checkbox" id="menu-toggle">
+
+        <!-- Icono hamburguesa -->
+        <label for="menu-toggle" class="menu-icon">
+            ☰ 
+        </label>
+        <nav>
+            <ul class="menu">
+                <li><a href="menu_1_inicio.html" class="menu1">Inicio</a></li>
+                <li><a href="menu_2_productos.html" class="menu1">Productos</a></li>
+                <li><a href="menu_3_contacto.html" class="menu1">Mas Ventas</a></li>
+                <li><a href="menu_4_perfil.html" class="menu1">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section>
+            <div class="main-container">
+                <div class="image" data-aos="zoom-in-right" data-aos-duration="2500">
+                    <img src="../aseets/img/canbiar.png" alt="">
+                </div>
+                <div class="content">
+                    <h1 data-aos="fade-left" data-aos-duration="1000" data-aos-delay="800">Mi nombre <span>Diego</span></h1>
+                    <div class="typewriter" data-aos="fade-right" data-aos-duration="1000" data-aos-delay="900">Un gusto <span></span></div>
+                    <p data-aos="flip-up" data-aos-duration="1000" data-aos-delay="1000">Creé esta tienda con el objetivo de ofrecer productos que realmente valgan la pena. Gracias por visitar y apoyar este proyecto.</p>
+                    <div class="social-links" data-aos="flip-down" data-aos-duration="1000" data-aos-delay="1200">
+                        <a href="https://wa.me/51974192779?text=Hola%20quiero%20informacion" target="_blank"><i class="fa-brands fa-whatsapp"></i></a>
+                        <a href="https://www.facebook.com/share/1AghDZNQYx/" target="_blank"><i class="fa-brands fa-facebook"></i></a>
+                        <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                    </div>
+                    <div class="btn" data-aos="zoom-out-left" data-aos-duration="1000" data-aos-delay="1300">
+                        <button onclick="window.open('https://wa.me/51974192779?text=Hola%20quiero%20informacion')">whatsaaaaaap</button>
+                    </div>
+                </div>
+            </div>
+    </section>
+        <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+        <script>
+          AOS.init({offset:0});
+        </script>
+        <script>
+            function hamburg(){
+                const navbar = document.querySelector(".dropdown")
+                navbar.style.transform = "translateY(0px)"
+            }
+            function cancel(){
+                const navbar = document.querySelector(".dropdown")
+                navbar.style.transform = "translateY(-500px)"
+            }
+        </script>
+        <script src="https://kit.fontawesome.com/81581fb069.js" crossorigin="anonymous">
+    </script>
+    <script>
+  // Obtener el nombre del archivo actual (más limpio que href completo)
+  const currentPage = window.location.pathname.split("/").pop();
+
+  // Seleccionar todos los enlaces del menú
+  const menuLinks = document.querySelectorAll('.menu a');
+
+  menuLinks.forEach(link => {
+    const linkPage = link.getAttribute('href');
+
+    if (linkPage === currentPage) {
+      link.classList.add('activo');
+    }
+  });
+</script>
+
+
+</body>
+</html>
